@@ -18,7 +18,7 @@ https://github.com/samwx/nodejs-knex
 Passo 2
 Utilizando os conceitos da aula 02, crie uma rota /products/:id e liste todos os detalhes do produto
 clicado. Para isso, além de declarar a rota especificada, você deverá implementar o método getById no
-arquivo Products.js dentro da pasta store. Utilize o método where para filtrar o produto por id.
+arquivo Products.js dentro da pasta services. Utilize o método where para filtrar o produto por id.
 
 Passo 3
 Abaixo dos detalhes do produto iremos listar todas as avaliações feitas via comentário. Para isso, além de

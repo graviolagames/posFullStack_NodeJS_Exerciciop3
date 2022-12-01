@@ -9,11 +9,13 @@ router.get("/", function (_, res) {
 	});
 });
 
-// router.get("/", function (_, res) {
-// 	ProductsService.findAll().then((products) => {
-// 		res.json(products);
-// 	});
-// });
+
+router.get("/:id",function (req, res) {
+	const { id } = req.params;
+	ProductsService.getById(id).then(function(product){
+		res.render("product",{product})
+	})
+})
 
 router.delete("/:id", function (req, res) {
 	const { id } = req.params;

@@ -3,7 +3,7 @@ import { db } from "../connection/db.js";
 export const TABLE_NAME = "products";
 export const ProductsService = {
 	findAll() {
-		return db(TABLE_NAME).select("*");
+		return  db(TABLE_NAME).select("*");
 	},
 	insert(product) {
 		return db(TABLE_NAME).insert(product);
@@ -20,4 +20,10 @@ export const ProductsService = {
 				price: product.price
 			});
 	},
+	getById(id){
+		return  db(TABLE_NAME)
+		.select("*")
+		.where("id",id)
+		.first();
+	}
 };
