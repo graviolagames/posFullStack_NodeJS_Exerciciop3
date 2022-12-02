@@ -2,4 +2,10 @@
 <p>Product details</p>
 <p><b>{{product.name}}</b>: {{product.description}}</p>
 <p><b>Price</b>: ${{product.price}}</p>
+
+<h1>Send a comment!</h1>
+<form action="/users" method="POST">
+<input type="text" name="comment" />
+<button type="submit">Send</button>
+</form>
     

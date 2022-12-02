@@ -1,6 +1,6 @@
 // Update with your config settings.
 
-const configs = {
+const knexConfigs = {
 
   development: {
     client: 'sqlite3',
@@ -54,4 +54,4 @@ const configs = {
 
 };
 
-module.exports =  configs;
+export default  knexConfigs;
