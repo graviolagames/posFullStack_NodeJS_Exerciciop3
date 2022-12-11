@@ -18,6 +18,7 @@ const __filename = fileURLToPath(import.meta.url);
 const __dirname = dirname(__filename);
 
 import productsRouter from "./routes/products.js";
+import commentsRouter from "./routes/comments.js";
 
 const app = express();
 
@@ -32,6 +33,8 @@ app.use(cookieParser());
 app.use(express.static(path.join(__dirname, "public")));
 
 app.use("/products", productsRouter);
+app.use("/comments", commentsRouter);
+
 
 // catch 404 and forward to error handler
 app.use(function (req, res, next) {

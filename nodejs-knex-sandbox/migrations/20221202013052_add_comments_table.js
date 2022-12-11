@@ -4,9 +4,10 @@
  */
 exports.up = function(knex) {
     return knex.schema.createTable('comments', column => {
-    column.increments('id').primary()
-    column.string('userName')
-    column.string('comment')
+        column.increments('id').primary()
+        column.foreign('productId');
+        column.string('userName');
+        column.string('comment')
     });
 };
 
