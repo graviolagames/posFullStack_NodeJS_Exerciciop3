@@ -26,5 +26,11 @@ export const CommentsService = {
 		.select("*")
 		.where("id",id)
 		.first();
+	},
+	getByProductId(productId){
+		return  db(TABLE_NAME)
+		.select("*")
+		.where("productId",productId)
 	}
+
 };

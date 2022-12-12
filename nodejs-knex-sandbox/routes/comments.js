@@ -4,8 +4,9 @@ import { CommentsService } from "../services/Comments.js";
 
 /* GET home page. */
 router.get("/", function (_, res) {
+	
 	CommentsService.findAll().then(function (comments) {
-		res.render("index", { comments });
+		res.json(comments);
 	});
 });
 
@@ -16,7 +17,12 @@ router.get("/:id",function (req, res) {
 		res.render("comment",{comment})
 	})
 })
-
+router.get("/products/:productId",function (req, res) {
+	const { productId } = req.params;
+	CommentsService.getByProductId(productId).then(function(comments){
+		res.json(comments);
+	})
+})
 router.delete("/:id", function (req, res) {
 	const { id } = req.params;
 	CommentsService.delete(id).then(() => {
