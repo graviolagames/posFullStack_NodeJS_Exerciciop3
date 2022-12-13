@@ -35,7 +35,8 @@ router.delete("/:id", function (req, res) {
 router.post("/", function (req, res) {
 	const { body } = req;
 	CommentsService.insert(body).then((comment) => {
-		res.json(comment);
+		//res.json(comment);
+		res.render("newComment");
 	});
 });
 
