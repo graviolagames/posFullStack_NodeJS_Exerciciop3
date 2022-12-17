@@ -23,6 +23,4 @@ arquivo Products.js dentro da pasta services. Utilize o método where para filtr
 Passo 3
 Abaixo dos detalhes do produto iremos listar todas as avaliações feitas via comentário. Para isso, além de
 listar os comentários feitos anteriormente, crie um formulário com os campos Nome e Comentário para
-que seja possível adicionar novos comentários.
-
-Migration command: knex migrate:make add_comments_table
+que seja possível adicionar novos comentários
